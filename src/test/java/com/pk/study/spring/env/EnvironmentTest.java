@@ -2,7 +2,6 @@ package com.pk.study.spring.env;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.core.env.Environment;
-import org.springframework.core.env.StandardEnvironment;
 import org.springframework.web.context.support.StandardServletEnvironment;
 
 /**
