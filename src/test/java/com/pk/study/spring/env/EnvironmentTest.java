@@ -1,10 +1,9 @@
 package com.pk.study.spring.env;
 
-import com.pk.study.spring.MyTestBean;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.env.Environment;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.springframework.core.env.StandardEnvironment;
+import org.springframework.web.context.support.StandardServletEnvironment;
 
 /**
  * @author pengkai
@@ -14,6 +13,6 @@ public class EnvironmentTest {
 
     @Test
     public void testSimpleLoad() {
-        Environment env = new E
+        Environment env = new StandardServletEnvironment();
     }
 }
