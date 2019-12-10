@@ -3,5 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myTestBean" class="com.pk.study.spring.MyTestBean"/>
+    <bean id="otherBean" class="com.pk.study.spring.bean.OtherBean" />
+    <bean id="foo" class="com.pk.study.spring.bean.Foo">
+        <property name="a" value="this is foo.a"  />
+    </bean>
+    <bean id="myBean" class="com.pk.study.spring.bean.MyBean">
+        <property name="testStr" value="myTestStr" />
+        <replaced-method name="getTestStr" replacer="otherBean" />
+        <lookup-method name="getFoo" bean="foo"/>
+    </bean>
 </beans>
