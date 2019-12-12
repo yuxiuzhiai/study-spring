@@ -1,8 +1,11 @@
 package com.pk.study.spring;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author pengkai
@@ -12,7 +15,20 @@ import org.springframework.context.annotation.Configuration;
 public class MyConfig {
 
     @Bean(name = "/foo")
-    public String bean(){
-        return "foo";
+    public UserInfo userInfo(){
+        UserInfo userInfo = new UserInfo();
+        userInfo.setA("a");
+        userInfo.setB("b");
+        return userInfo;
+    }
+    @Bean
+    public ServletRegistrationBean<MyAnotherServlet> myAnotherServletServletRegistrationBean(){
+        ServletRegistrationBean<MyAnotherServlet> bean = new ServletRegistrationBean<>();
+        bean.setServlet(new MyAnotherServlet());
+        List<String> urlMappings = new ArrayList<>();
+        urlMappings.add("/myAnotherServlet");
+        bean.setUrlMappings(urlMappings);
+
+        return bean;
     }
 }
