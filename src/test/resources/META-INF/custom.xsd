@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.my.org/schema/custom"
+        xml:tns="http://www.my.org/schema/custom"
+        elementFormDefault="qualified">
+    <element name="custom">
+        <complexType>
+            <attribute name="name" type="string"/>
+        </complexType>
+    </element>
+</schema>
