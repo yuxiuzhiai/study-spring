@@ -1,5 +1,6 @@
 package com.pk.study.spring.bean;
 
+import com.pk.study.spring.UserInfo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -16,7 +17,7 @@ public class BeanFactoryTest {
     @Test
     public void testSimpleLoad() {
         BeanFactory bf = new XmlBeanFactory(new ClassPathResource("beanFactory.xml"));
-        MyBean bean = (MyBean) bf.getBean("myBean");
-        assertEquals("testStr", bean.getTestStr());
+        UserInfo bean = (UserInfo) bf.getBean("userInfo");
+        assertEquals("testStr", bean.getA());
     }
 }
