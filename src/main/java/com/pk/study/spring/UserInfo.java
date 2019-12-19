@@ -10,4 +10,8 @@ import lombok.Data;
 public class UserInfo {
     private String a;
     private String b;
+
+    public void test(String a){
+        System.out.println("UserInfo.test");
+    }
 }
