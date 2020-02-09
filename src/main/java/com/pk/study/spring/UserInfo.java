@@ -13,7 +13,7 @@ public class UserInfo {
     private String a;
     private String b;
 
-    public String test(){
-        return "hello,world";
+    public void test(String a){
+        System.out.println("UserInfo.test");
     }
 }
