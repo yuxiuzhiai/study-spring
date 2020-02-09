@@ -1,4 +1,4 @@
-package com.pk.study.spring;
+package com.pk.study.spring.servlet;
 
 import javax.servlet.http.HttpServlet;
 

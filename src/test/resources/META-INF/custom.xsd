@@ -5,6 +5,7 @@
         elementFormDefault="qualified">
     <element name="custom">
         <complexType>
+            <attribute name="id" type="string"/>
             <attribute name="name" type="string"/>
         </complexType>
     </element>

@@ -5,10 +5,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.my.org/schema/custom  http://www.my.org/schema/custom.xsd">
 
-    <bean id="userInfo" class="com.pk.study.spring.UserInfo">
-        <property name="a" value="aaa"/>
-        <property name="b" value="bbb"/>
-    </bean>
-    <alias name="userInfo" alias="hahaha,aaa"/>
-
+    <custom:custom id="custom" name="custom name"/>
 </beans>

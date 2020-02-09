@@ -1,4 +1,4 @@
-package com.pk.study.spring.xml;
+package com.pk.study.spring.customer;
 
 import org.junit.platform.commons.util.StringUtils;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;

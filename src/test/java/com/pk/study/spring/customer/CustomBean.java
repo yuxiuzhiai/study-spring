@@ -1,4 +1,4 @@
-package com.pk.study.spring.xml;
+package com.pk.study.spring.customer;
 
 /**
  * @author pengkai

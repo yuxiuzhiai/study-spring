@@ -1,20 +1,16 @@
-package com.pk.study.spring.xml;
+package com.pk.study.spring.customer;
 
 import com.pk.study.spring.UserInfo;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author pengkai
  * @date 2019/12/14
  */
-public class XmlBeanDefinitionTest {
+public class CustomTest {
 
     @Test
     public void test(){
@@ -24,9 +20,9 @@ public class XmlBeanDefinitionTest {
         //XmlBeanDefinitionReader创建，从名字可以看出来 这个类是用来从xml文件中读取配置的
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
         //具体解析xml文件中的配置，并注册到BeanDefinitionRegistry中去
-        reader.loadBeanDefinitions(new ClassPathResource("xmlBeanDefinition.xml"));
+        reader.loadBeanDefinitions(new ClassPathResource("custom.xml"));
 
-        UserInfo userInfo = (UserInfo) beanFactory.getBean("userInfo");
-        System.out.println(userInfo.getA());
+        CustomBean userInfo = beanFactory.getBean(CustomBean.class);
+        System.out.println(userInfo.getName());
     }
 }
